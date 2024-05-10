@@ -1,0 +1,29 @@
+from dsa1 import *
+
+se=set()
+print("enter the total number of student")
+var=int(input())
+print("enter the mark of individual student")
+for i in range (var):
+    ele=int(input())
+    se.add(ele)
+print(se)
+
+se1=set()
+print("enter the total number of student")
+var=int(input())
+print("enter the mark of individual student")
+for i in range (var):
+    ele=int(input())    
+    se1.add(ele)
+print(se1)
+
+n=int(input("Enter an element"))
+print(add(se,n))
+print(remove(se,n))
+print(check(se,n))
+print(size(se))
+intersection(se,se1)
+union(se,se1)
+differ(se,se1)
+subset(se,se1)

@@ -1,0 +1,61 @@
+def add(se, e):
+    for i in se:
+        if e not in se:
+            se.add(e)
+        return se
+
+def remove(se, a):
+    for i in se:
+        if a in se:
+            se.remove(a)
+        return se
+    
+def check(se,b):
+    for i in se:
+        if b in se:
+            print("element is already present")
+        else:
+            print("element not found")
+
+            
+def size(se):
+    print("length of the set is",len(se))
+    
+def intersection(se,se1):
+    se2=set()
+    for i in se:
+        if i in se1:
+            se2.add(i)
+    print(se2)
+
+def union(se,se1):
+    se3=set()
+    for i in se:
+        se3.add(i)
+    for i in se1:
+        se3.add(i)
+    print(se3)
+    
+        
+
+
+def differ(se,se1):
+    se4=set()
+    for i in se:
+        if i not in se1:
+            se4.add(i)
+    print(se4)
+    
+def subset(se,se1):
+  
+        for i in se1:
+            if i not in se:
+                print( "not a subset")
+                break
+            else:
+                print( "subset")
+                break              
+        
+    
+
+        
