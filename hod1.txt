@@ -1,0 +1,92 @@
+def main():
+    n=int(input("enter the size of the hash table"))
+
+    for i in range (n):
+        ht.append(-1)
+        
+    
+   # insert(n,ht)
+    #search(ht,n)
+    insertquad(n,ht)
+    searchquad(ht,n)
+        
+"""     
+
+
+def insert(n,key):
+    ans=1
+    while(ans==1):
+        print("enter the key value which you want to insert")
+        key=int(input())
+        loc=key%n
+        if(ht[loc]==-1):
+            ht[loc]=key
+        else:
+            count=0
+            while(ht[loc]!=-1):
+                loc=((loc+1)%n)
+                ht[loc]=key
+                count=count+1
+
+                if(count==n-1):
+                    print("hash table is now ovewrflow")
+                    return;
+
+
+        print(ht)
+        ans=int(input("MOre?"))
+    
+def search(ht,n):
+     
+    key=int(input())   
+    loc=key%n
+    
+    
+    if(ht[loc]==key):
+        print("element is found")
+        
+    else:
+        loc=loc+1
+        print("not found")
+        """
+
+def insertquad(n,key):
+    ans=1
+    while(ans==1):
+        print("enter the key value which you want to insert")
+        key=int(input())
+        loc=key%n
+        if(ht[loc]==-1):
+            ht[loc]=key
+        else:
+            count=1
+            while(ht[loc]!=-1):
+                loc=((loc+(count**2))%n)
+                ht[loc]=key
+                count=count+1
+
+                if(count==n):
+                    print("hash table is now ovewrflow")
+                    return
+
+
+        print(ht)
+        ans=int(input("MOre?"))
+
+def searchquad(ht,n):
+    count=1
+    key=int(input())   
+    loc=key%n
+    
+    
+    if(ht[loc]==key):
+        print("element is found")
+        
+    else:
+        loc=loc+(count**2)
+        print("not found")
+    
+
+ht=[]
+n=len(ht)
+main()
